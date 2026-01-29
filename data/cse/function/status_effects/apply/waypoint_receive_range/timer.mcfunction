@@ -1,0 +1,1 @@
+scoreboard players remove @s cse.status_effects.waypoint_receive_range 1

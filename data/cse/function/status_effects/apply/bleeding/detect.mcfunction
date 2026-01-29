@@ -1,0 +1,1 @@
+schedule function cse:status_effects/apply/bleeding/main 1t

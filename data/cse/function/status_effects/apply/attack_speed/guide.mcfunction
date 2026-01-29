@@ -1,0 +1,8 @@
+
+execute \
+    if score @s cse.status_effects.attack_speed matches 1.. run \
+function cse:status_effects/apply/attack_speed/timer
+
+execute \
+    if score @s cse.status_effects.attack_speed matches 0 run \
+function cse:status_effects/apply/attack_speed/reset

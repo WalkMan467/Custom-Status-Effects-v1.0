@@ -1,0 +1,1 @@
+scoreboard players remove @s cse.status_effects.flying_speed 1

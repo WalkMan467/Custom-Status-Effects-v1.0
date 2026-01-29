@@ -1,0 +1,1 @@
+scoreboard players remove @s cse.status_effects.safe_fall_distance 1

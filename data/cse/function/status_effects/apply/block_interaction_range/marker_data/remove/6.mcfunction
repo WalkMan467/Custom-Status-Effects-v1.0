@@ -1,0 +1,10 @@
+scoreboard objectives remove cse.status_effects.block_interaction_range
+scoreboard objectives remove cse.status_effects.block_interaction_range.base.value
+scoreboard objectives remove cse.status_effects.block_interaction_range.value
+scoreboard objectives remove cse.status_effects.block_interaction_range.math
+scoreboard objectives remove cse.status_effects.block_interaction_range.id
+
+scoreboard objectives remove cse.status_effects.block_interaction_range.value.max
+scoreboard players reset #reset.block_interaction_range cse.global.main
+
+schedule clear cse:status_effects/apply/block_interaction_range/main

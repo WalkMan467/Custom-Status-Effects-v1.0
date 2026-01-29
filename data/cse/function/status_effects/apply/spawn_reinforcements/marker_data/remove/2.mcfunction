@@ -1,0 +1,1 @@
+$scoreboard players reset [$(id)]_$(0)$(1)$(2)$(3) cse.status_effects.spawn_reinforcements.id

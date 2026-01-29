@@ -1,0 +1,1 @@
+$scoreboard players add [$(id)]_$(0)$(1)$(2)$(3) cse.status_effects.explosion_knockback_resistance.id 1

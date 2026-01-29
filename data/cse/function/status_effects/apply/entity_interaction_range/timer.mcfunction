@@ -1,0 +1,1 @@
+scoreboard players remove @s cse.status_effects.entity_interaction_range 1

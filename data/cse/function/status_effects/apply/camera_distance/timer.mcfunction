@@ -1,0 +1,1 @@
+scoreboard players remove @s cse.status_effects.camera_distance 1

@@ -1,0 +1,1 @@
+scoreboard players remove @s cse.status_effects.max_health 1

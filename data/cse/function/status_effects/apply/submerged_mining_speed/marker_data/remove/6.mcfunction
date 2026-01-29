@@ -1,0 +1,10 @@
+scoreboard objectives remove cse.status_effects.submerged_mining_speed
+scoreboard objectives remove cse.status_effects.submerged_mining_speed.base.value
+scoreboard objectives remove cse.status_effects.submerged_mining_speed.value
+scoreboard objectives remove cse.status_effects.submerged_mining_speed.math
+scoreboard objectives remove cse.status_effects.submerged_mining_speed.id
+
+scoreboard objectives remove cse.status_effects.submerged_mining_speed.value.max
+scoreboard players reset #reset.submerged_mining_speed cse.global.main
+
+schedule clear cse:status_effects/apply/submerged_mining_speed/main

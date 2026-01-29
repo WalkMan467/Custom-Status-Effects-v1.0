@@ -1,0 +1,1 @@
+scoreboard players remove @s cse.status_effects.block_interaction_range 1

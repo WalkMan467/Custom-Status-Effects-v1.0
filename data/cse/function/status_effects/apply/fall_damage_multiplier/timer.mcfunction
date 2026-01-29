@@ -1,0 +1,1 @@
+scoreboard players remove @s cse.status_effects.fall_damage_multiplier 1

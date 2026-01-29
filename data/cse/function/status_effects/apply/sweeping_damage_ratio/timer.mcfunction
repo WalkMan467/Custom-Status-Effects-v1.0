@@ -1,0 +1,1 @@
+scoreboard players remove @s cse.status_effects.sweeping_damage_ratio 1

@@ -1,0 +1,1 @@
+$scoreboard players add [$(id)]_$(0)$(1)$(2)$(3) cse.status_effects.step_height.id 1

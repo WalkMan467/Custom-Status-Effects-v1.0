@@ -1,0 +1,1 @@
+scoreboard players remove @s cse.status_effects.water_movement_efficiency 1

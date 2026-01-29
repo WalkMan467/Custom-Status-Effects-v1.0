@@ -1,0 +1,31 @@
+{
+    "values": [
+      "minecraft:area_effect_cloud",
+      "minecraft:armor_stand",
+      "minecraft:marker",
+      "minecraft:item_display",
+      "minecraft:block_display",
+      "minecraft:text_display",
+      "minecraft:interaction",
+      "minecraft:item",
+      "minecraft:lightning_bolt",
+      "minecraft:minecart",
+      "minecraft:tnt_minecart",
+      "minecraft:chest_minecart",
+      "minecraft:experience_orb",
+      "minecraft:experience_bottle",
+      "#minecraft:boat",
+      "minecraft:falling_block",
+      "minecraft:evoker_fangs",
+      "minecraft:splash_potion",
+      "minecraft:lingering_potion",
+      "#impact_projectiles",
+      "minecraft:command_block_minecart",
+      "minecraft:item_frame",
+      "minecraft:glow_item_frame",
+      "minecraft:mannequin",
+      "minecraft:ominous_item_spawner",
+      "minecraft:painting",
+      "minecraft:evoker_fangs"
+    ]
+  }

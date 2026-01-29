@@ -1,0 +1,1 @@
+scoreboard players remove @s cse.status_effects.movement_speed 1

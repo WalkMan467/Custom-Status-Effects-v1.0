@@ -1,0 +1,10 @@
+scoreboard objectives remove cse.status_effects.fall_damage_multiplier
+scoreboard objectives remove cse.status_effects.fall_damage_multiplier.base.value
+scoreboard objectives remove cse.status_effects.fall_damage_multiplier.value
+scoreboard objectives remove cse.status_effects.fall_damage_multiplier.math
+scoreboard objectives remove cse.status_effects.fall_damage_multiplier.id
+
+scoreboard objectives remove cse.status_effects.fall_damage_multiplier.value.max
+scoreboard players reset #reset.fall_damage_multiplier cse.global.main
+
+schedule clear cse:status_effects/apply/fall_damage_multiplier/main

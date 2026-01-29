@@ -1,0 +1,10 @@
+scoreboard objectives remove cse.status_effects.waypoint_receive_range
+scoreboard objectives remove cse.status_effects.waypoint_receive_range.base.value
+scoreboard objectives remove cse.status_effects.waypoint_receive_range.value
+scoreboard objectives remove cse.status_effects.waypoint_receive_range.math
+scoreboard objectives remove cse.status_effects.waypoint_receive_range.id
+
+scoreboard objectives remove cse.status_effects.waypoint_receive_range.value.max
+scoreboard players reset #reset.waypoint_receive_range cse.global.main
+
+schedule clear cse:status_effects/apply/waypoint_receive_range/main

@@ -1,0 +1,1 @@
+scoreboard players remove @s cse.status_effects.knockback_resistance 1

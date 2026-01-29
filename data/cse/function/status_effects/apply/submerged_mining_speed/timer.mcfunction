@@ -1,0 +1,1 @@
+scoreboard players remove @s cse.status_effects.submerged_mining_speed 1

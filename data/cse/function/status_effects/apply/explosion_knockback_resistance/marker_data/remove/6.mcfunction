@@ -1,0 +1,10 @@
+scoreboard objectives remove cse.status_effects.explosion_knockback_resistance
+scoreboard objectives remove cse.status_effects.explosion_knockback_resistance.base.value
+scoreboard objectives remove cse.status_effects.explosion_knockback_resistance.value
+scoreboard objectives remove cse.status_effects.explosion_knockback_resistance.math
+scoreboard objectives remove cse.status_effects.explosion_knockback_resistance.id
+
+scoreboard objectives remove cse.status_effects.explosion_knockback_resistance.value.max
+scoreboard players reset #reset.explosion_knockback_resistance cse.global.main
+
+schedule clear cse:status_effects/apply/explosion_knockback_resistance/main
