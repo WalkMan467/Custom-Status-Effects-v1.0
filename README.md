@@ -1,0 +1,1 @@
+# Custom-Status-Effects-v1.0
