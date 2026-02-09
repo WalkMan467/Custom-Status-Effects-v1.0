@@ -6,6 +6,7 @@ summon marker ~ ~ ~ \
             [ \
                 "cse.status_effect.camera_distance.data", \
                 "cse.status_effect.camera_distance.id.$(id)", \
+                cse.status_effect.camera_distance.$(type), \
                 "summon" \
             ], \
         data: \
@@ -13,6 +14,7 @@ summon marker ~ ~ ~ \
                 cse: \
                     { \
                         id:"$(id)", \
+                        type:"$(type)", \
                         camera_distance: \
                             { \
                                 base_value:$(base)f, \
@@ -31,6 +33,7 @@ summon marker ~ ~ ~ \
             [ \
                 "cse.status_effect.camera_distance.data", \
                 "cse.status_effect.camera_distance.id.$(id)", \
+                "cse.status_effect.camera_distance.$(type)", \
                 "summon", \
                 "cse.detect.death" \
             ], \
@@ -39,6 +42,7 @@ summon marker ~ ~ ~ \
                 cse: \
                     { \
                         id:"$(id)", \
+                        type:"$(type)", \
                         camera_distance: \
                             { \
                                 base_value:$(base)f, \

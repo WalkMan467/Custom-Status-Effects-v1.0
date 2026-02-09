@@ -7,6 +7,7 @@ scoreboard players reset #reset.max_absorption cse.global.main
 #   Naming conventions: "[id] Status Effects Marker UUID"
 
 $data modify storage cse:status_effects.id.uuid temp.id set value "$(id)"
+$data modify storage cse:status_effects.id.uuid temp.type set value "$(type)"
 
 function cse:status_effects/apply/max_absorption/marker_data/remove/2 with storage cse:status_effects.id.uuid temp
 

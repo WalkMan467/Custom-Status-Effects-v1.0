@@ -1,1 +1,0 @@
-$scoreboard players add [$(id)]_$(0)$(1)$(2)$(3) cse.status_effects.follow_range.id 1

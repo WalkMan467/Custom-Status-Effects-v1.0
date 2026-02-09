@@ -6,6 +6,7 @@ summon marker ~ ~ ~ \
             [ \
                 "cse.status_effect.water_movement_efficiency.data", \
                 "cse.status_effect.water_movement_efficiency.id.$(id)", \
+                cse.status_effect.water_movement_efficiency.$(type), \
                 "summon" \
             ], \
         data: \
@@ -13,6 +14,7 @@ summon marker ~ ~ ~ \
                 cse: \
                     { \
                         id:"$(id)", \
+                        type:"$(type)", \
                         water_movement_efficiency: \
                             { \
                                 base_value:$(base)f, \
@@ -31,6 +33,7 @@ summon marker ~ ~ ~ \
             [ \
                 "cse.status_effect.water_movement_efficiency.data", \
                 "cse.status_effect.water_movement_efficiency.id.$(id)", \
+                "cse.status_effect.water_movement_efficiency.$(type)", \
                 "summon", \
                 "cse.detect.death" \
             ], \
@@ -39,6 +42,7 @@ summon marker ~ ~ ~ \
                 cse: \
                     { \
                         id:"$(id)", \
+                        type:"$(type)", \
                         water_movement_efficiency: \
                             { \
                                 base_value:$(base)f, \

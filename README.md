@@ -15,10 +15,11 @@
 > base: The initial value applied
 > value: The value added upon repeated stacking
 > max: The maximum value limit
+> type: add_value, add_multiplied_base, add_multiplied_total
 > id: You can define the ID as you wish to see the effect, Effects with the same ID and modified attribute will stack; otherwise a new independent one will be created
 
 ```hs
-function cse:sys/status_effects/use {attribute:"movement_speed",duration:100,base:0.1,value:0.1,max:0.2, id:"global2"}
+function cse:sys/status_effects/use {attribute:"armor",duration:40,base:1,value:1,max:5, id:"global",type:"add_value"}
 ```
 
 ### Bleeding Status

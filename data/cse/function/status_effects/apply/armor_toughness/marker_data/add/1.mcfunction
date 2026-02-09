@@ -6,6 +6,7 @@ summon marker ~ ~ ~ \
             [ \
                 "cse.status_effect.armor_toughness.data", \
                 "cse.status_effect.armor_toughness.id.$(id)", \
+                cse.status_effect.armor_toughness.$(type), \
                 "summon" \
             ], \
         data: \
@@ -13,6 +14,7 @@ summon marker ~ ~ ~ \
                 cse: \
                     { \
                         id:"$(id)", \
+                        type:"$(type)", \
                         armor_toughness: \
                             { \
                                 base_value:$(base)f, \
@@ -31,6 +33,7 @@ summon marker ~ ~ ~ \
             [ \
                 "cse.status_effect.armor_toughness.data", \
                 "cse.status_effect.armor_toughness.id.$(id)", \
+                "cse.status_effect.armor_toughness.$(type)", \
                 "summon", \
                 "cse.detect.death" \
             ], \
@@ -39,6 +42,7 @@ summon marker ~ ~ ~ \
                 cse: \
                     { \
                         id:"$(id)", \
+                        type:"$(type)", \
                         armor_toughness: \
                             { \
                                 base_value:$(base)f, \

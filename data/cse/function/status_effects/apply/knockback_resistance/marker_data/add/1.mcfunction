@@ -6,6 +6,7 @@ summon marker ~ ~ ~ \
             [ \
                 "cse.status_effect.knockback_resistance.data", \
                 "cse.status_effect.knockback_resistance.id.$(id)", \
+                cse.status_effect.knockback_resistance.$(type), \
                 "summon" \
             ], \
         data: \
@@ -13,6 +14,7 @@ summon marker ~ ~ ~ \
                 cse: \
                     { \
                         id:"$(id)", \
+                        type:"$(type)", \
                         knockback_resistance: \
                             { \
                                 base_value:$(base)f, \
@@ -31,6 +33,7 @@ summon marker ~ ~ ~ \
             [ \
                 "cse.status_effect.knockback_resistance.data", \
                 "cse.status_effect.knockback_resistance.id.$(id)", \
+                "cse.status_effect.knockback_resistance.$(type)", \
                 "summon", \
                 "cse.detect.death" \
             ], \
@@ -39,6 +42,7 @@ summon marker ~ ~ ~ \
                 cse: \
                     { \
                         id:"$(id)", \
+                        type:"$(type)", \
                         knockback_resistance: \
                             { \
                                 base_value:$(base)f, \

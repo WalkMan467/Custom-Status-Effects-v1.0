@@ -6,6 +6,7 @@ summon marker ~ ~ ~ \
             [ \
                 "cse.status_effect.spawn_reinforcements.data", \
                 "cse.status_effect.spawn_reinforcements.id.$(id)", \
+                cse.status_effect.spawn_reinforcements.$(type), \
                 "summon" \
             ], \
         data: \
@@ -13,6 +14,7 @@ summon marker ~ ~ ~ \
                 cse: \
                     { \
                         id:"$(id)", \
+                        type:"$(type)", \
                         spawn_reinforcements: \
                             { \
                                 base_value:$(base)f, \
@@ -31,6 +33,7 @@ summon marker ~ ~ ~ \
             [ \
                 "cse.status_effect.spawn_reinforcements.data", \
                 "cse.status_effect.spawn_reinforcements.id.$(id)", \
+                "cse.status_effect.spawn_reinforcements.$(type)", \
                 "summon", \
                 "cse.detect.death" \
             ], \
@@ -39,6 +42,7 @@ summon marker ~ ~ ~ \
                 cse: \
                     { \
                         id:"$(id)", \
+                        type:"$(type)", \
                         spawn_reinforcements: \
                             { \
                                 base_value:$(base)f, \

@@ -6,6 +6,7 @@ summon marker ~ ~ ~ \
             [ \
                 "cse.status_effect.sweeping_damage_ratio.data", \
                 "cse.status_effect.sweeping_damage_ratio.id.$(id)", \
+                cse.status_effect.sweeping_damage_ratio.$(type), \
                 "summon" \
             ], \
         data: \
@@ -13,6 +14,7 @@ summon marker ~ ~ ~ \
                 cse: \
                     { \
                         id:"$(id)", \
+                        type:"$(type)", \
                         sweeping_damage_ratio: \
                             { \
                                 base_value:$(base)f, \
@@ -31,6 +33,7 @@ summon marker ~ ~ ~ \
             [ \
                 "cse.status_effect.sweeping_damage_ratio.data", \
                 "cse.status_effect.sweeping_damage_ratio.id.$(id)", \
+                "cse.status_effect.sweeping_damage_ratio.$(type)", \
                 "summon", \
                 "cse.detect.death" \
             ], \
@@ -39,6 +42,7 @@ summon marker ~ ~ ~ \
                 cse: \
                     { \
                         id:"$(id)", \
+                        type:"$(type)", \
                         sweeping_damage_ratio: \
                             { \
                                 base_value:$(base)f, \

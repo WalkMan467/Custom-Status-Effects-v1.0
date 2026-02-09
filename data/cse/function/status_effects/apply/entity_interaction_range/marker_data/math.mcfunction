@@ -18,6 +18,8 @@ execute \
     store result score #max cse.status_effects.entity_interaction_range.math run \
 data get entity @s data.cse.entity_interaction_range.max_value 1000
 
+scoreboard players set #abs cse.global.main -1
+
 scoreboard players set $abs cse.status_effects.entity_interaction_range.math -1
 scoreboard players operation #base.abs cse.status_effects.entity_interaction_range.math = #base cse.status_effects.entity_interaction_range.math
 scoreboard players operation #max.abs cse.status_effects.entity_interaction_range.math = #max cse.status_effects.entity_interaction_range.math

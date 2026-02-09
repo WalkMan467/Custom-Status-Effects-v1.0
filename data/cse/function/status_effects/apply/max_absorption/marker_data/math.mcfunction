@@ -18,6 +18,8 @@ execute \
     store result score #max cse.status_effects.max_absorption.math run \
 data get entity @s data.cse.max_absorption.max_value 1000
 
+scoreboard players set #abs cse.global.main -1
+
 scoreboard players set $abs cse.status_effects.max_absorption.math -1
 scoreboard players operation #base.abs cse.status_effects.max_absorption.math = #base cse.status_effects.max_absorption.math
 scoreboard players operation #max.abs cse.status_effects.max_absorption.math = #max cse.status_effects.max_absorption.math

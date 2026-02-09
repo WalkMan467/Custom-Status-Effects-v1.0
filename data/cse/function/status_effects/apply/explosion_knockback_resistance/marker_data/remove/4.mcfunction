@@ -5,4 +5,4 @@ scoreboard players reset @s cse.status_effects.explosion_knockback_resistance.va
 
 function cse:status_effects/apply/explosion_knockback_resistance/marker_data/remove/5
 
-$attribute @s minecraft:explosion_knockback_resistance modifier remove cse.status_effects.explosion_knockback_resistance.$(id)
+$attribute @s minecraft:explosion_knockback_resistance modifier remove cse.status_effects.explosion_knockback_resistance.$(id).$(type)

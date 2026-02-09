@@ -7,15 +7,16 @@ execute \
 tag @s add cse.status_effect.submerged_mining_speed.data_target
 
 $execute \
-    as @n[sort=arbitrary,tag=cse.status_effect.submerged_mining_speed.id.$(id),tag=cse.status_effect.submerged_mining_speed.data_target,tag=cse.status_effect.submerged_mining_speed.data,distance=0..,type=marker] run \
+    as @n[sort=arbitrary,tag=cse.status_effect.submerged_mining_speed.id.$(id),tag=cse.status_effect.submerged_mining_speed.$(type),tag=cse.status_effect.submerged_mining_speed.data_target,tag=cse.status_effect.submerged_mining_speed.data,distance=0..,type=marker] run \
 function cse:status_effects/apply/submerged_mining_speed/marker_data/math {duration:$(duration),value:$(value), max:$(max)}
 
-$attribute @s minecraft:submerged_mining_speed modifier remove cse.status_effects.submerged_mining_speed.$(id)
+$attribute @s minecraft:submerged_mining_speed modifier remove cse.status_effects.submerged_mining_speed.$(id).$(type)
 data modify storage cse:status_effects submerged_mining_speed.final_value.value set from entity @n[tag=cse.status_effect.submerged_mining_speed.data,tag=cse.status_effect.submerged_mining_speed.data_target,distance=0..,type=marker] data.cse.submerged_mining_speed.base_value
-
+$data modify storage cse:status_effects submerged_mining_speed.final_value.type set value "$(type)"
 $data modify storage cse:status_effects submerged_mining_speed.final_value.id set value "$(id)"
 function cse:status_effects/apply/submerged_mining_speed/marker_data/merge with storage cse:status_effects submerged_mining_speed.final_value
 
+data modify storage temp2 temp set from storage cse:status_effects submerged_mining_speed.final_value
 data remove storage cse:status_effects submerged_mining_speed
 
 tag @s remove cse.status_effect.submerged_mining_speed.data_target

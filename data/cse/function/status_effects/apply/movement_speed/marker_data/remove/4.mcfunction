@@ -5,4 +5,4 @@ scoreboard players reset @s cse.status_effects.movement_speed.value
 
 function cse:status_effects/apply/movement_speed/marker_data/remove/5
 
-$attribute @s minecraft:movement_speed modifier remove cse.status_effects.movement_speed.$(id)
+$attribute @s minecraft:movement_speed modifier remove cse.status_effects.movement_speed.$(id).$(type)

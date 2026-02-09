@@ -6,6 +6,7 @@ summon marker ~ ~ ~ \
             [ \
                 "cse.status_effect.explosion_knockback_resistance.data", \
                 "cse.status_effect.explosion_knockback_resistance.id.$(id)", \
+                cse.status_effect.explosion_knockback_resistance.$(type), \
                 "summon" \
             ], \
         data: \
@@ -13,6 +14,7 @@ summon marker ~ ~ ~ \
                 cse: \
                     { \
                         id:"$(id)", \
+                        type:"$(type)", \
                         explosion_knockback_resistance: \
                             { \
                                 base_value:$(base)f, \
@@ -31,6 +33,7 @@ summon marker ~ ~ ~ \
             [ \
                 "cse.status_effect.explosion_knockback_resistance.data", \
                 "cse.status_effect.explosion_knockback_resistance.id.$(id)", \
+                "cse.status_effect.explosion_knockback_resistance.$(type)", \
                 "summon", \
                 "cse.detect.death" \
             ], \
@@ -39,6 +42,7 @@ summon marker ~ ~ ~ \
                 cse: \
                     { \
                         id:"$(id)", \
+                        type:"$(type)", \
                         explosion_knockback_resistance: \
                             { \
                                 base_value:$(base)f, \

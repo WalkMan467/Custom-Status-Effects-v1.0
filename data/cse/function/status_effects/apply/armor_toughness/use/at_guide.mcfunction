@@ -9,31 +9,32 @@ execute \
 scoreboard players operation @s cse.status_effects.armor_toughness.id = #global cse.status_effects.armor_toughness.id
 
 # Status Effects Base Value
+
 tag @s add cse.status_effect.armor_toughness.new
 
 $execute \
-    if score @s cse.status_effects.armor_toughness.id = @n[tag=cse.status_effect.armor_toughness.data,tag=cse.status_effect.armor_toughness.id.$(id),distance=0..,type=marker] cse.status_effects.armor_toughness.id run \
+    if score @s cse.status_effects.armor_toughness.id = @n[tag=cse.status_effect.armor_toughness.data,tag=cse.status_effect.armor_toughness.id.$(id),tag=cse.status_effect.armor_toughness.$(type),distance=0..,type=marker] cse.status_effects.armor_toughness.id run \
 tag @s remove cse.status_effect.armor_toughness.new
 
-$attribute @s[tag=cse.status_effect.armor_toughness.new] minecraft:armor_toughness modifier add cse.status_effects.armor_toughness.$(id) $(base) add_multiplied_base
+$attribute @s[tag=cse.status_effect.armor_toughness.new] minecraft:armor_toughness modifier add cse.status_effects.armor_toughness.$(id).$(type) $(base) $(type)
 
 tag @s remove cse.status_effect.armor_toughness.new
 
 # Detect if there are duplicate IDs
 $execute \
-    unless entity @n[tag=cse.status_effect.armor_toughness.data,tag=cse.status_effect.armor_toughness.id.$(id),distance=0..,type=marker] run \
+    unless entity @n[tag=cse.status_effect.armor_toughness.data,tag=cse.status_effect.armor_toughness.id.$(id),tag=cse.status_effect.armor_toughness.$(type),distance=0..,type=marker] run \
 tag @s add cse.status_effect.armor_toughness.new
 
 # Call function using the result
 $execute \
     if entity @s[tag=cse.status_effect.armor_toughness.new] run \
-function cse:status_effects/apply/armor_toughness/marker_data/add/1 {id:"$(id)", duration:$(duration), base:$(base), value:$(value), max:$(max)}
+function cse:status_effects/apply/armor_toughness/marker_data/add/1 {id:"$(id)", duration:$(duration), base:$(base), value:$(value), max:$(max), type:"$(type)"}
 
 # Multiple applications of the same state effect were detected ; the modify function was invoked
 $execute \
     unless entity @s[tag=cse.status_effect.armor_toughness.new] \
-    if entity @n[tag=cse.status_effect.armor_toughness.data,tag=cse.status_effect.armor_toughness.id.$(id),distance=0..,type=marker] run \
-function cse:status_effects/apply/armor_toughness/marker_data/modify {id:"$(id)", duration:$(duration), value:$(value), max:$(max)}
+    if entity @n[tag=cse.status_effect.armor_toughness.data,tag=cse.status_effect.armor_toughness.id.$(id),tag=cse.status_effect.armor_toughness.$(type),distance=0..,type=marker] run \
+function cse:status_effects/apply/armor_toughness/marker_data/modify {id:"$(id)", duration:$(duration), value:$(value), max:$(max), type:"$(type)"}
 
 # Remove Tag
 tag @s remove cse.status_effect.armor_toughness.new

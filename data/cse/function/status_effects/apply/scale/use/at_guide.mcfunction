@@ -9,31 +9,32 @@ execute \
 scoreboard players operation @s cse.status_effects.scale.id = #global cse.status_effects.scale.id
 
 # Status Effects Base Value
+
 tag @s add cse.status_effect.scale.new
 
 $execute \
-    if score @s cse.status_effects.scale.id = @n[tag=cse.status_effect.scale.data,tag=cse.status_effect.scale.id.$(id),distance=0..,type=marker] cse.status_effects.scale.id run \
+    if score @s cse.status_effects.scale.id = @n[tag=cse.status_effect.scale.data,tag=cse.status_effect.scale.id.$(id),tag=cse.status_effect.scale.$(type),distance=0..,type=marker] cse.status_effects.scale.id run \
 tag @s remove cse.status_effect.scale.new
 
-$attribute @s[tag=cse.status_effect.scale.new] minecraft:scale modifier add cse.status_effects.scale.$(id) $(base) add_multiplied_base
+$attribute @s[tag=cse.status_effect.scale.new] minecraft:scale modifier add cse.status_effects.scale.$(id).$(type) $(base) $(type)
 
 tag @s remove cse.status_effect.scale.new
 
 # Detect if there are duplicate IDs
 $execute \
-    unless entity @n[tag=cse.status_effect.scale.data,tag=cse.status_effect.scale.id.$(id),distance=0..,type=marker] run \
+    unless entity @n[tag=cse.status_effect.scale.data,tag=cse.status_effect.scale.id.$(id),tag=cse.status_effect.scale.$(type),distance=0..,type=marker] run \
 tag @s add cse.status_effect.scale.new
 
 # Call function using the result
 $execute \
     if entity @s[tag=cse.status_effect.scale.new] run \
-function cse:status_effects/apply/scale/marker_data/add/1 {id:"$(id)", duration:$(duration), base:$(base), value:$(value), max:$(max)}
+function cse:status_effects/apply/scale/marker_data/add/1 {id:"$(id)", duration:$(duration), base:$(base), value:$(value), max:$(max), type:"$(type)"}
 
 # Multiple applications of the same state effect were detected ; the modify function was invoked
 $execute \
     unless entity @s[tag=cse.status_effect.scale.new] \
-    if entity @n[tag=cse.status_effect.scale.data,tag=cse.status_effect.scale.id.$(id),distance=0..,type=marker] run \
-function cse:status_effects/apply/scale/marker_data/modify {id:"$(id)", duration:$(duration), value:$(value), max:$(max)}
+    if entity @n[tag=cse.status_effect.scale.data,tag=cse.status_effect.scale.id.$(id),tag=cse.status_effect.scale.$(type),distance=0..,type=marker] run \
+function cse:status_effects/apply/scale/marker_data/modify {id:"$(id)", duration:$(duration), value:$(value), max:$(max), type:"$(type)"}
 
 # Remove Tag
 tag @s remove cse.status_effect.scale.new

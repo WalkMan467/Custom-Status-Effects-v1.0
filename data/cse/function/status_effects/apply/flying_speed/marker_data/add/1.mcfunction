@@ -6,6 +6,7 @@ summon marker ~ ~ ~ \
             [ \
                 "cse.status_effect.flying_speed.data", \
                 "cse.status_effect.flying_speed.id.$(id)", \
+                cse.status_effect.flying_speed.$(type), \
                 "summon" \
             ], \
         data: \
@@ -13,6 +14,7 @@ summon marker ~ ~ ~ \
                 cse: \
                     { \
                         id:"$(id)", \
+                        type:"$(type)", \
                         flying_speed: \
                             { \
                                 base_value:$(base)f, \
@@ -31,6 +33,7 @@ summon marker ~ ~ ~ \
             [ \
                 "cse.status_effect.flying_speed.data", \
                 "cse.status_effect.flying_speed.id.$(id)", \
+                "cse.status_effect.flying_speed.$(type)", \
                 "summon", \
                 "cse.detect.death" \
             ], \
@@ -39,6 +42,7 @@ summon marker ~ ~ ~ \
                 cse: \
                     { \
                         id:"$(id)", \
+                        type:"$(type)", \
                         flying_speed: \
                             { \
                                 base_value:$(base)f, \

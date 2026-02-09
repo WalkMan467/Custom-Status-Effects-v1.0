@@ -18,6 +18,8 @@ execute \
     store result score #max cse.status_effects.camera_distance.math run \
 data get entity @s data.cse.camera_distance.max_value 1000
 
+scoreboard players set #abs cse.global.main -1
+
 scoreboard players set $abs cse.status_effects.camera_distance.math -1
 scoreboard players operation #base.abs cse.status_effects.camera_distance.math = #base cse.status_effects.camera_distance.math
 scoreboard players operation #max.abs cse.status_effects.camera_distance.math = #max cse.status_effects.camera_distance.math

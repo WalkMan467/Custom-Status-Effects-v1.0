@@ -18,6 +18,8 @@ execute \
     store result score #max cse.status_effects.attack_damage.math run \
 data get entity @s data.cse.attack_damage.max_value 1000
 
+scoreboard players set #abs cse.global.main -1
+
 scoreboard players set $abs cse.status_effects.attack_damage.math -1
 scoreboard players operation #base.abs cse.status_effects.attack_damage.math = #base cse.status_effects.attack_damage.math
 scoreboard players operation #max.abs cse.status_effects.attack_damage.math = #max cse.status_effects.attack_damage.math

@@ -6,6 +6,7 @@ summon marker ~ ~ ~ \
             [ \
                 "cse.status_effect.oxygen_bonus.data", \
                 "cse.status_effect.oxygen_bonus.id.$(id)", \
+                cse.status_effect.oxygen_bonus.$(type), \
                 "summon" \
             ], \
         data: \
@@ -13,6 +14,7 @@ summon marker ~ ~ ~ \
                 cse: \
                     { \
                         id:"$(id)", \
+                        type:"$(type)", \
                         oxygen_bonus: \
                             { \
                                 base_value:$(base)f, \
@@ -31,6 +33,7 @@ summon marker ~ ~ ~ \
             [ \
                 "cse.status_effect.oxygen_bonus.data", \
                 "cse.status_effect.oxygen_bonus.id.$(id)", \
+                "cse.status_effect.oxygen_bonus.$(type)", \
                 "summon", \
                 "cse.detect.death" \
             ], \
@@ -39,6 +42,7 @@ summon marker ~ ~ ~ \
                 cse: \
                     { \
                         id:"$(id)", \
+                        type:"$(type)", \
                         oxygen_bonus: \
                             { \
                                 base_value:$(base)f, \

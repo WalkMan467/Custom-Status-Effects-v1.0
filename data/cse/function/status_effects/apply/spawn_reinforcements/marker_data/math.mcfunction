@@ -18,6 +18,8 @@ execute \
     store result score #max cse.status_effects.spawn_reinforcements.math run \
 data get entity @s data.cse.spawn_reinforcements.max_value 1000
 
+scoreboard players set #abs cse.global.main -1
+
 scoreboard players set $abs cse.status_effects.spawn_reinforcements.math -1
 scoreboard players operation #base.abs cse.status_effects.spawn_reinforcements.math = #base cse.status_effects.spawn_reinforcements.math
 scoreboard players operation #max.abs cse.status_effects.spawn_reinforcements.math = #max cse.status_effects.spawn_reinforcements.math

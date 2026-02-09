@@ -7,6 +7,7 @@ scoreboard players reset #reset.flying_speed cse.global.main
 #   Naming conventions: "[id] Status Effects Marker UUID"
 
 $data modify storage cse:status_effects.id.uuid temp.id set value "$(id)"
+$data modify storage cse:status_effects.id.uuid temp.type set value "$(type)"
 
 function cse:status_effects/apply/flying_speed/marker_data/remove/2 with storage cse:status_effects.id.uuid temp
 

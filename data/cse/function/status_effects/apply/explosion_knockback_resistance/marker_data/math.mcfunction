@@ -18,6 +18,8 @@ execute \
     store result score #max cse.status_effects.explosion_knockback_resistance.math run \
 data get entity @s data.cse.explosion_knockback_resistance.max_value 1000
 
+scoreboard players set #abs cse.global.main -1
+
 scoreboard players set $abs cse.status_effects.explosion_knockback_resistance.math -1
 scoreboard players operation #base.abs cse.status_effects.explosion_knockback_resistance.math = #base cse.status_effects.explosion_knockback_resistance.math
 scoreboard players operation #max.abs cse.status_effects.explosion_knockback_resistance.math = #max cse.status_effects.explosion_knockback_resistance.math

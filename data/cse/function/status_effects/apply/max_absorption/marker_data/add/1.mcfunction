@@ -6,6 +6,7 @@ summon marker ~ ~ ~ \
             [ \
                 "cse.status_effect.max_absorption.data", \
                 "cse.status_effect.max_absorption.id.$(id)", \
+                cse.status_effect.max_absorption.$(type), \
                 "summon" \
             ], \
         data: \
@@ -13,6 +14,7 @@ summon marker ~ ~ ~ \
                 cse: \
                     { \
                         id:"$(id)", \
+                        type:"$(type)", \
                         max_absorption: \
                             { \
                                 base_value:$(base)f, \
@@ -31,6 +33,7 @@ summon marker ~ ~ ~ \
             [ \
                 "cse.status_effect.max_absorption.data", \
                 "cse.status_effect.max_absorption.id.$(id)", \
+                "cse.status_effect.max_absorption.$(type)", \
                 "summon", \
                 "cse.detect.death" \
             ], \
@@ -39,6 +42,7 @@ summon marker ~ ~ ~ \
                 cse: \
                     { \
                         id:"$(id)", \
+                        type:"$(type)", \
                         max_absorption: \
                             { \
                                 base_value:$(base)f, \

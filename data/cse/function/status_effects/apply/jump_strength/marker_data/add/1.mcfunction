@@ -6,6 +6,7 @@ summon marker ~ ~ ~ \
             [ \
                 "cse.status_effect.jump_strength.data", \
                 "cse.status_effect.jump_strength.id.$(id)", \
+                cse.status_effect.jump_strength.$(type), \
                 "summon" \
             ], \
         data: \
@@ -13,6 +14,7 @@ summon marker ~ ~ ~ \
                 cse: \
                     { \
                         id:"$(id)", \
+                        type:"$(type)", \
                         jump_strength: \
                             { \
                                 base_value:$(base)f, \
@@ -31,6 +33,7 @@ summon marker ~ ~ ~ \
             [ \
                 "cse.status_effect.jump_strength.data", \
                 "cse.status_effect.jump_strength.id.$(id)", \
+                "cse.status_effect.jump_strength.$(type)", \
                 "summon", \
                 "cse.detect.death" \
             ], \
@@ -39,6 +42,7 @@ summon marker ~ ~ ~ \
                 cse: \
                     { \
                         id:"$(id)", \
+                        type:"$(type)", \
                         jump_strength: \
                             { \
                                 base_value:$(base)f, \

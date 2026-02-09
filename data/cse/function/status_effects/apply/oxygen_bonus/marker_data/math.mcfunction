@@ -18,6 +18,8 @@ execute \
     store result score #max cse.status_effects.oxygen_bonus.math run \
 data get entity @s data.cse.oxygen_bonus.max_value 1000
 
+scoreboard players set #abs cse.global.main -1
+
 scoreboard players set $abs cse.status_effects.oxygen_bonus.math -1
 scoreboard players operation #base.abs cse.status_effects.oxygen_bonus.math = #base cse.status_effects.oxygen_bonus.math
 scoreboard players operation #max.abs cse.status_effects.oxygen_bonus.math = #max cse.status_effects.oxygen_bonus.math

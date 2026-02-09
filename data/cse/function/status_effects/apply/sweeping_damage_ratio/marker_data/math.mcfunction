@@ -18,6 +18,8 @@ execute \
     store result score #max cse.status_effects.sweeping_damage_ratio.math run \
 data get entity @s data.cse.sweeping_damage_ratio.max_value 1000
 
+scoreboard players set #abs cse.global.main -1
+
 scoreboard players set $abs cse.status_effects.sweeping_damage_ratio.math -1
 scoreboard players operation #base.abs cse.status_effects.sweeping_damage_ratio.math = #base cse.status_effects.sweeping_damage_ratio.math
 scoreboard players operation #max.abs cse.status_effects.sweeping_damage_ratio.math = #max cse.status_effects.sweeping_damage_ratio.math

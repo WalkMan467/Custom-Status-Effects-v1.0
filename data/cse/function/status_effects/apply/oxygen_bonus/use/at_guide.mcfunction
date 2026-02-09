@@ -9,31 +9,32 @@ execute \
 scoreboard players operation @s cse.status_effects.oxygen_bonus.id = #global cse.status_effects.oxygen_bonus.id
 
 # Status Effects Base Value
+
 tag @s add cse.status_effect.oxygen_bonus.new
 
 $execute \
-    if score @s cse.status_effects.oxygen_bonus.id = @n[tag=cse.status_effect.oxygen_bonus.data,tag=cse.status_effect.oxygen_bonus.id.$(id),distance=0..,type=marker] cse.status_effects.oxygen_bonus.id run \
+    if score @s cse.status_effects.oxygen_bonus.id = @n[tag=cse.status_effect.oxygen_bonus.data,tag=cse.status_effect.oxygen_bonus.id.$(id),tag=cse.status_effect.oxygen_bonus.$(type),distance=0..,type=marker] cse.status_effects.oxygen_bonus.id run \
 tag @s remove cse.status_effect.oxygen_bonus.new
 
-$attribute @s[tag=cse.status_effect.oxygen_bonus.new] minecraft:oxygen_bonus modifier add cse.status_effects.oxygen_bonus.$(id) $(base) add_multiplied_base
+$attribute @s[tag=cse.status_effect.oxygen_bonus.new] minecraft:oxygen_bonus modifier add cse.status_effects.oxygen_bonus.$(id).$(type) $(base) $(type)
 
 tag @s remove cse.status_effect.oxygen_bonus.new
 
 # Detect if there are duplicate IDs
 $execute \
-    unless entity @n[tag=cse.status_effect.oxygen_bonus.data,tag=cse.status_effect.oxygen_bonus.id.$(id),distance=0..,type=marker] run \
+    unless entity @n[tag=cse.status_effect.oxygen_bonus.data,tag=cse.status_effect.oxygen_bonus.id.$(id),tag=cse.status_effect.oxygen_bonus.$(type),distance=0..,type=marker] run \
 tag @s add cse.status_effect.oxygen_bonus.new
 
 # Call function using the result
 $execute \
     if entity @s[tag=cse.status_effect.oxygen_bonus.new] run \
-function cse:status_effects/apply/oxygen_bonus/marker_data/add/1 {id:"$(id)", duration:$(duration), base:$(base), value:$(value), max:$(max)}
+function cse:status_effects/apply/oxygen_bonus/marker_data/add/1 {id:"$(id)", duration:$(duration), base:$(base), value:$(value), max:$(max), type:"$(type)"}
 
 # Multiple applications of the same state effect were detected ; the modify function was invoked
 $execute \
     unless entity @s[tag=cse.status_effect.oxygen_bonus.new] \
-    if entity @n[tag=cse.status_effect.oxygen_bonus.data,tag=cse.status_effect.oxygen_bonus.id.$(id),distance=0..,type=marker] run \
-function cse:status_effects/apply/oxygen_bonus/marker_data/modify {id:"$(id)", duration:$(duration), value:$(value), max:$(max)}
+    if entity @n[tag=cse.status_effect.oxygen_bonus.data,tag=cse.status_effect.oxygen_bonus.id.$(id),tag=cse.status_effect.oxygen_bonus.$(type),distance=0..,type=marker] run \
+function cse:status_effects/apply/oxygen_bonus/marker_data/modify {id:"$(id)", duration:$(duration), value:$(value), max:$(max), type:"$(type)"}
 
 # Remove Tag
 tag @s remove cse.status_effect.oxygen_bonus.new

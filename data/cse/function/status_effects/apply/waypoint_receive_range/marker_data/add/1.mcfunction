@@ -6,6 +6,7 @@ summon marker ~ ~ ~ \
             [ \
                 "cse.status_effect.waypoint_receive_range.data", \
                 "cse.status_effect.waypoint_receive_range.id.$(id)", \
+                cse.status_effect.waypoint_receive_range.$(type), \
                 "summon" \
             ], \
         data: \
@@ -13,6 +14,7 @@ summon marker ~ ~ ~ \
                 cse: \
                     { \
                         id:"$(id)", \
+                        type:"$(type)", \
                         waypoint_receive_range: \
                             { \
                                 base_value:$(base)f, \
@@ -31,6 +33,7 @@ summon marker ~ ~ ~ \
             [ \
                 "cse.status_effect.waypoint_receive_range.data", \
                 "cse.status_effect.waypoint_receive_range.id.$(id)", \
+                "cse.status_effect.waypoint_receive_range.$(type)", \
                 "summon", \
                 "cse.detect.death" \
             ], \
@@ -39,6 +42,7 @@ summon marker ~ ~ ~ \
                 cse: \
                     { \
                         id:"$(id)", \
+                        type:"$(type)", \
                         waypoint_receive_range: \
                             { \
                                 base_value:$(base)f, \

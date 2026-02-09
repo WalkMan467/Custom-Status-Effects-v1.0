@@ -18,6 +18,8 @@ execute \
     store result score #max cse.status_effects.mining_efficiency.math run \
 data get entity @s data.cse.mining_efficiency.max_value 1000
 
+scoreboard players set #abs cse.global.main -1
+
 scoreboard players set $abs cse.status_effects.mining_efficiency.math -1
 scoreboard players operation #base.abs cse.status_effects.mining_efficiency.math = #base cse.status_effects.mining_efficiency.math
 scoreboard players operation #max.abs cse.status_effects.mining_efficiency.math = #max cse.status_effects.mining_efficiency.math

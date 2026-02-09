@@ -18,6 +18,8 @@ execute \
     store result score #max cse.status_effects.waypoint_receive_range.math run \
 data get entity @s data.cse.waypoint_receive_range.max_value 1000
 
+scoreboard players set #abs cse.global.main -1
+
 scoreboard players set $abs cse.status_effects.waypoint_receive_range.math -1
 scoreboard players operation #base.abs cse.status_effects.waypoint_receive_range.math = #base cse.status_effects.waypoint_receive_range.math
 scoreboard players operation #max.abs cse.status_effects.waypoint_receive_range.math = #max cse.status_effects.waypoint_receive_range.math

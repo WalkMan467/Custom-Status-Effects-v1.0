@@ -1,1 +1,0 @@
-scoreboard players remove @s cse.status_effects.follow_range 1

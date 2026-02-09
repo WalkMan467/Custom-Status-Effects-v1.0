@@ -7,6 +7,7 @@ scoreboard players reset #reset.sweeping_damage_ratio cse.global.main
 #   Naming conventions: "[id] Status Effects Marker UUID"
 
 $data modify storage cse:status_effects.id.uuid temp.id set value "$(id)"
+$data modify storage cse:status_effects.id.uuid temp.type set value "$(type)"
 
 function cse:status_effects/apply/sweeping_damage_ratio/marker_data/remove/2 with storage cse:status_effects.id.uuid temp
 

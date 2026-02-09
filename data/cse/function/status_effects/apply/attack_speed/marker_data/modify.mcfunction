@@ -7,15 +7,16 @@ execute \
 tag @s add cse.status_effect.attack_speed.data_target
 
 $execute \
-    as @n[sort=arbitrary,tag=cse.status_effect.attack_speed.id.$(id),tag=cse.status_effect.attack_speed.data_target,tag=cse.status_effect.attack_speed.data,distance=0..,type=marker] run \
+    as @n[sort=arbitrary,tag=cse.status_effect.attack_speed.id.$(id),tag=cse.status_effect.attack_speed.$(type),tag=cse.status_effect.attack_speed.data_target,tag=cse.status_effect.attack_speed.data,distance=0..,type=marker] run \
 function cse:status_effects/apply/attack_speed/marker_data/math {duration:$(duration),value:$(value), max:$(max)}
 
-$attribute @s minecraft:attack_speed modifier remove cse.status_effects.attack_speed.$(id)
+$attribute @s minecraft:attack_speed modifier remove cse.status_effects.attack_speed.$(id).$(type)
 data modify storage cse:status_effects attack_speed.final_value.value set from entity @n[tag=cse.status_effect.attack_speed.data,tag=cse.status_effect.attack_speed.data_target,distance=0..,type=marker] data.cse.attack_speed.base_value
-
+$data modify storage cse:status_effects attack_speed.final_value.type set value "$(type)"
 $data modify storage cse:status_effects attack_speed.final_value.id set value "$(id)"
 function cse:status_effects/apply/attack_speed/marker_data/merge with storage cse:status_effects attack_speed.final_value
 
+data modify storage temp2 temp set from storage cse:status_effects attack_speed.final_value
 data remove storage cse:status_effects attack_speed
 
 tag @s remove cse.status_effect.attack_speed.data_target
