@@ -35,6 +35,7 @@ function cse:status_effects/apply/water_movement_efficiency/clear
 function cse:status_effects/apply/waypoint_receive_range/clear
 function cse:status_effects/apply/waypoint_transmit_range/clear
 function cse:status_effects/apply/bleeding/clear
+function cse:status_effects/apply/soul_restraint/clear
 
 tag @s remove cse.status.effect.clear
 

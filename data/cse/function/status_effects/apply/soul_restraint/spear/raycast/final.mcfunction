@@ -1,0 +1,1 @@
+scoreboard players operation @s cse.status_effects.soul_restraint.distance = #soul_restraint.raycast cse.global.main
