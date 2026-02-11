@@ -16,3 +16,12 @@ scoreboard objectives remove cse.status_effects.bleeding.dot_max
 scoreboard objectives remove cse.status_effects.bleeding.health_temp
 scoreboard objectives remove cse.status_effects.bleeding.max_health_temp
 scoreboard objectives remove cse.status_effects.bleeding.health
+
+scoreboard objectives remove cse.status_effects.soul_restraint
+scoreboard objectives remove cse.status_effects.soul_restraint.max_range
+scoreboard objectives remove cse.status_effects.soul_restraint.range
+scoreboard objectives remove cse.status_effects.soul_restraint.distance
+scoreboard objectives remove cse.status_effects.soul_restraint.id
+scoreboard objectives remove cse.status_effects.soul_restraint.display.duration
+scoreboard objectives remove cse.status_effects.soul_restraint.display.timer
+scoreboard objectives remove cse.status_effects.soul_restraint.raycast
